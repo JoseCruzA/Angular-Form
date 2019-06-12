@@ -1,0 +1,163 @@
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.header{
+    background: lightblue;
+    margin: -8px;
+    margin-top: -21px;
+    height: 50px;
+}
+
+#col{
+    width: 450px;
+}
+
+#cold{
+    width: 100px;
+}
+
+.form{
+    border: 0;
+    border-bottom: 1px inset black;
+    width: 300px;
+    height: 30px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 15px;
+    -webkit-transition:-webkit-transform .4s ease-out;
+    -moz-transition:-moz-transform .4s ease-out;
+    -o-transition:-o-transform .4s ease-out;
+    -ms-transition:-ms-transform .4s ease-out;
+    transition:transform .4s ease-out;
+    text-align: center;
+}
+
+.form:hover{
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03)
+}
+
+.form:focus{
+    outline: 0px;
+}
+
+.button, .button:focus{
+    outline: none;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    width: 70px;
+    height: 40px;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.938);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.938);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.938);
+}
+
+.button:hover, .button:hover:focus {
+    outline: none;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+#Save{
+    margin-left: 370px;
+}
+
+#Update{
+    margin-left: 50px;
+}
+
+.students{
+    border: 1px inset black;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin-top: 0px;
+    margin-left: 20px;
+    width: 900px;
+}
+
+#showname{
+    width: 150px;
+}
+
+#showsemester{
+    width: 70px;
+}
+
+#showprogram{
+    width: 200px;
+}
+
+#showemail{
+    width: 230px;
+}
+
+#showadress{
+    width: 90px;
+}
+
+td{
+    text-align: center;
+    border: 1px inset black;
+}
+
+thead{
+    border-bottom: 1px inset black;
+    background: rgb(73, 69, 69);
+}
+
+.head{
+    color: white;
+}
+
+#div{
+    overflow: scroll;
+    width: 940px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+.select{
+    outline: none;
+    border: none;
+    border-bottom: 1px inset black;
+    border-bottom-right-radius: 5px;
+    width: 300px;
+    background: none;
+    text-align-last: center;
+    -webkit-transition:-webkit-transform .4s ease-out;
+    -moz-transition:-moz-transform .4s ease-out;
+    -o-transition:-o-transform .4s ease-out;
+    -ms-transition:-ms-transform .4s ease-out;
+    transition:transform .4s ease-out;
+}
+
+.select:hover{
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03)
+}
+
+#delete{
+    margin-left: 15px;
+}
+
+.link{
+    outline: none;
+    border: none;
+    background: none;
+    text-decoration: underline blue;
+    color: blue;
+    cursor: pointer;
+}

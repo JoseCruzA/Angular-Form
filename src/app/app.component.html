@@ -1,20 +1,117 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="header">
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <table>
+    <tbody>
+      <tr>
+        <th id="cold">
+          <p>Name:</p>
+        </th>
+        <th id="col">
+          <input type="text" class="form" id="name" [(ngModel)]="student.name" required/>
+        </th>
+        <th id="cold">
+          <p>Lastname:</p>
+        </th>
+        <th id="col">
+          <input type="text" class="form" id="lastname" [(ngModel)]="student.lastname"/>
+        </th>
+      </tr>
+      <tr>
+        <th id="cold">
+          <p>Semester:</p>
+        </th>
+        <th id="col">
+          <input type="number" class="form" id="semester" [(ngModel)]="student.semester" min="1" max="10"/>
+        </th>
+        <th id="cold">
+          <p>Program:</p>
+        </th>
+        <th id="col">
+          <select #program (change)="student.program = program.value" class="select">
+            <option #in >Choice your program</option>
+            <option *ngFor="let program of programs">
+              {{program.program}}
+            </option>
+          </select>
+        </th>
+      </tr>
+      <tr>
+        <th id="cold">
+          <p>Email:</p>
+        </th>
+        <th id="col">
+          <input type="email" class="form" id="email" [(ngModel)]="student.email"/>
+        </th>
+        <th id="cold">
+          <p>Home Adress:</p>
+        </th>
+        <th id="col">
+          <input type="text" class="form" id="adress" [(ngModel)]="student.adress"/>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+  <br /> <br />
+
+  <button type="submit" class="button" id="Save" (click)="CreateStudent()" (click)="program.value = in.value">Save</button>
+  <button type="submit" class="button" id="Update" (click)="UpdateStudent()" (click)="program.value = in.value">Update</button>
+
+  <br /> <br />
+  <div id="div">
+    <table class="students">
+      <thead>
+        <tr>
+          <td id="showname" class="head">
+            Name
+          </td>
+          <td id="showsemester" class="head">
+            Semester
+          </td>
+          <td id="showprogram" class="head">
+            Program
+          </td>
+          <td id="showemail" class="head">
+            Email
+          </td>
+          <td id="showadress" class="head">
+            Home Adress
+          </td>
+          <td id="actions" class="head">
+            Actions
+          </td>
+        </tr>
+      </thead>
+      <tbody *ngFor="let student of students">
+        <tr>
+          <td id="showname">
+            {{student.name}} {{student.lastname}}
+          </td>
+          <td id="showsemester">
+            {{student.semester}}
+          </td>
+          <td id="showprogram">
+            {{student.program}}
+          </td>
+          <td id="showemail">
+            {{student.email}}
+          </td>
+          <td id="showadress">
+            {{student.adress}}
+          </td>
+          <td>
+            <button type="submit"  class="link" id="Select" (click)="select(student)" (click)="program.value = student.program">Select</button>
+            <button type="submit" class="link" id="delete" (click)="delete(student)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
 
